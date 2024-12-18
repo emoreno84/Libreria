@@ -45,6 +45,17 @@ public class Libreria {
         return null;
     }
 
+    public Libro buscarPorTitulo(String titulo){
+        for (int i = 0; i < listadoLibros.length; i++){
+            if (listadoLibros[i] != null){
+                if (listadoLibros[i].getTitulo().equalsIgnoreCase(titulo)){
+                    return listadoLibros[i];
+                }
+            }
+        }
+        return null;
+    }
+
     public Libro buscarPorAutor(String autor){
         for (int i = 0; i < listadoLibros.length; i++){
             if (listadoLibros[i] != null){
@@ -56,5 +67,16 @@ public class Libreria {
         return null;
     }
 
+    public String toString(){
+        StringBuilder strBuilder = new StringBuilder();
+        int i = 0;
+        while (listadoLibros[i] != null && i < listadoLibros.length){
+            strBuilder.append(listadoLibros[i].toString());
+            strBuilder.append("+++++++++++++++++++++++++++++++++++++\n");
+            strBuilder.append("+++++++++++++++++++++++++++++++++++++\n");
+            i++;
+        }
+        return strBuilder.toString();
+    }
 
 }

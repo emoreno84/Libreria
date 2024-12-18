@@ -32,4 +32,18 @@ public class Libro {
     public Enums.Genero getGenero() {
         return genero;
     }
+
+    @Override
+    public String toString(){
+        StringBuilder strBuilder = new StringBuilder();
+
+        strBuilder.append("ISBN: " + this.getIsbn() + "\n");
+        strBuilder.append("Título: " + this.getTitulo() + "\n");
+        strBuilder.append("Autor: " + this.getAutor() + "\n");
+        strBuilder.append("Número de páginas: " + this.getNumPaginas() + "\n");
+        strBuilder.append("Género: " + this.getGenero() + "\n");
+
+        return strBuilder.toString();
+    }
+
 }
