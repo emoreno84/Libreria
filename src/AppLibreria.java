@@ -75,12 +75,18 @@ public class AppLibreria {
     }
 
     private static void anyadir(Libreria libreria){
+        String isbn;
+        String titulo;
+        String autor;
         System.out.println("Indique el ISBN: ");
-        String isbn = teclado.next();
+        isbn = teclado.nextLine();
+        teclado.next();
         System.out.println("Indique el Título: ");
-        String titulo = teclado.next();
+        titulo = teclado.nextLine();
+        teclado.next();
         System.out.println("Indique el Autor: ");
-        String autor = teclado.next();
+        autor = teclado.nextLine();
+        teclado.next();
         System.out.println("Indique el número de páginas: ");
         int numPaginas = teclado.nextInt();
         System.out.println("Elija el género: ");
